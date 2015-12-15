@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AnimatedLaunchImage.h"
+#import "XWMagicMoveController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,6 +20,18 @@
     
     [AnimatedLaunchImage fadeAnimateLaunchImageWithAdImageUrl:@"http://www.domain.com/path/to/image.jpg" delay:3.0f];
     
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    XWMagicMoveController *magicMoveController = [[XWMagicMoveController alloc] init];
+    UINavigationController *rootNavigationController = [[UINavigationController alloc] initWithRootViewController:magicMoveController];
+    
+    
+    self.window.rootViewController = rootNavigationController;
+    
+    [self.window makeKeyAndVisible];
+    
+
     
     // Override point for customization after application launch.
     return YES;

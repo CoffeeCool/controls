@@ -17,8 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    AnimatedLaunchImageView *animatedLaunchImageView = [[AnimatedLaunchImageView alloc] initWithImage:[UIImage getLaunchImage]];
-    //[self.view addSubview:animatedLaunchImageView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
